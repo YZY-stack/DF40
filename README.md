@@ -55,7 +55,7 @@ The figure below shows the pipeline of four generation methods used in our DF40 
 
 
 
-## 💥 DF Dataset
+## 💥 DF40 Dataset
 | Type                    | ID-Number | Method        | Download Link | Visual Examples |
 |-------------------------|-----------|---------------|---------------|-----------------|
 | Face-swapping (FS)      | 1         | FSGAN         |Coming Soon               |  [![fsgan-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/fsgan.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/fsgan.gif)               |

@@ -37,13 +37,6 @@ The following two figures display the statistical description and illustrate the
   <img src="df40_figs/table1.jpg" style="max-width:60%;">
 </div>
 
-<div align="center"> 
-</div>
-<div style="text-align:center;">
-  <img src="df40_figs/table2.jpg" style="max-width:60%;">
-</div>
-
-
 
 ---
 

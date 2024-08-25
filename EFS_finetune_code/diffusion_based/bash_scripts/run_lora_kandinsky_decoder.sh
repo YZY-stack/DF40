@@ -12,7 +12,7 @@ accelerate launch --mixed_precision="fp16" train_scripts/train_kandinsky_decoder
   --gradient_checkpointing \
   --learning_rate=1e-04 \
   --lr_scheduler="constant" --lr_warmup_steps=0 \
-  --validation_prompt="a wxpay human face" \
+  --validation_prompt="a human face" \
   --checkpointing_steps=10000 \
   --image_folder="/apdcephfs_cq8/share_2992679/Datasets/all_frames/" \
   --validation_epochs=1000

@@ -1,11 +1,15 @@
-# DF40: Toward Next-Generation Deepfake Detection
-
-Welcome to our work *DF40*, for next-generation deepfake detection. 
+# DF40: Toward Next-Generation Deepfake Detection ([Project Page](https://yzy-stack.github.io/homepage_for_df40/))
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-brightgreen.svg)](https://creativecommons.org/licenses/by-nc/4.0/) ![Release .10](https://img.shields.io/badge/Release-1.0-brightgreen) ![PyTorch](https://img.shields.io/badge/PyTorch-1.11-brightgreen) ![Python](https://img.shields.io/badge/Python-3.7.2-brightgreen)
 
 
-**DF40 Dataset Highlight:** The key features of our proposed **DF40 dataset** are as follows:
+Welcome to our work *DF40*, for next-generation deepfake detection.
+
+We propose: (1) a **diverse deepfake dataset** with 40 distinct generations methods; (2) a **comprehensive benchmark** for training, evaluation, and analysis.
+
+
+
+**DF40 Dataset Highlight:**. The key features of our proposed **DF40 dataset** are as follows:
 
 > ✅ **Forgery Diversity**: *DF40* comprises **40** distinct deepfake techniques (both representive and SOTA methods are included), facilialting the detection of nowadays' SOTA deepfakes and AIGCs. We provide **10** face-swapping methods, **13** face-reenactment methods, **12** entire face synthesis methods, and **5** face editing.
 > 
@@ -55,53 +59,55 @@ The figure below shows the pipeline of four generation methods used in our DF40 
 
 
 
-## 💥 DF Dataset
-| Type                    | ID-Number | Method        | Download Link | Visual Examples |
+## 💥 DF40 Dataset
+| Type                    | ID-Number | Generation Method        | Original Data Source | Visual Examples |
 |-------------------------|-----------|---------------|---------------|-----------------|
-| Face-swapping (FS)      | 1         | FSGAN         |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EUYXBP-FLfpGqoXNvemgCzIBb5mOp4MLzpMaXkVOnB0wzg?e=DtZmzv)               |  [![fsgan-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/fsgan.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/fsgan.gif)               |
-|                         | 2         | FaceSwap      |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EfawT-a5jEFGlOq9h6gKHb8BZjCRlUL175-RCkC4xwjYxw?e=SAHQkh)               |  [![faceswap-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/faceswap.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/faceswap.gif)               |
-|                         | 3         | SimSwap       |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EcHhmhM4w2FBjDX1DiQpvk0BSk50dgcAT7TiH5-rPmIIDA?e=Kk9pt9)               |  [![simswap-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/simswap.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/simswap.gif)               |
-|                         | 4         | InSwapper     |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EWp5dSXVyiFIjqUAO-pqBwABEDMNi1VOlrAXtiCLaMqoqQ?e=7CQaIB)               |  [![inswap-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/inswap.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/inswap.gif)               |
-|                         | 5         | BlendFace     |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/Efhz5ni0hRNMss16Ia-cOSkBhboyQFGxE1xGvmFDc61xXw?e=y1gXSF)               |   [![blendface-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/blendface.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/blendface.gif)              |
-|                         | 6         | UniFace       |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EQLpC2UcH7pGpg1kBkweBbAB-AGa0ys_B5GqeIQGQ3SVpw?e=64eRr9)               |   [![uniface-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/uniface.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/uniface.gif)              |
-|                         | 7         | MobileSwap    |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EUZ2RNJuIANBp_-xL_qNCa4BdS8T1sPTlHy3TwVVzURgug?e=2Ci41t)               |   [![mobileswap-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mobileswap.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mobileswap.gif)              |
-|                         | 8         | e4s           |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EcPeAiqVLuVIugvovJEev1EBJamTG6GxKNipsKoi-OYKQw?e=NPagz5)               |   [![e4s-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/e4s.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/e4s.gif)              |
-|                         | 9         | FaceDancer    |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/ERlrQNqPCEpPnKKyLu7KEYMBateR-IRzdAyhy1nV0NhCaQ?e=R7qznh)               |    [![facedancer-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/facedancer.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/facedancer.gif)             |
-|                         | 10        | DeepFaceLab   |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/ERLDxXqXjjlPgbpQyZ15mIoBsHqSNvkvpuNfRAbmrnPjbg?e=2PTLBS)               |    [![deepfacelab-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/deepfacelab.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/deepfacelab.gif)            |
-| Face-reenactment (FR)   | 11        | FOMM          |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EUws9ZP8DfxInXFBDHO-yZ4BTLdxwvByXam3WtMuvJ-Alg?e=orReX0)               |    [![fomm-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/fomm.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/fomm.gif)             |
-|                         | 12        | FS_vid2vid    |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EbPmQ8Et1NdBnApAAKGdl-4BiGhBklD6pQQ3KdYSMt6jNA?e=fRPIbM)               |    [![face_vid2vid-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/face_vid2vid.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/face_vid2vid.gif)             |
-|                         | 13        | Wav2Lip       |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EWWh6zIJShZOlFPUAjT7ogABUvJzPnryeiXTlR6ID0j6sQ?e=sOLrgx)               |    [![wav2lip-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/wav2lip.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/wav2lip.gif)             |
-|                         | 14        | MRAA          |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/ETz0X1hB5CBEm0ADJ3dn-F8Bk5foynvQ4jmHnavZejvhdQ?e=cbqZa0)               |    [![mraa-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mraa.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mraa.gif)             |
-|                         | 15        | OneShot       |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EZJHNvdyjUFBppW-OHQUg_IBxZvThiGNsplpw1B6XKUCsw?e=izixge)               |    [![oneshot-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/oneshot.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/oneshot.gif)             |
-|                         | 16        | PIRender      |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/ESSUbXL36MBLpJXRsLYFOrIBF8p71mNeHu6j7BddXj0X_A?e=2H7CYC)               |    [![pirender-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/pirender.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/pirender.gif)             |
-|                         | 17        | TPSM         |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EdEl6WJr35xPhoa-KwH2sH0Bg5lPR0EmGqAi5ZmHwenzZA?e=uaEK5y)               |    [![tpsm-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/tpsm.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/tpsm.gif)             |
-|                         | 18        | LIA           |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EdQp7ty5MOpOjViCBAQxvrEBC_mNS57QvsEsnrXqqOv0mw?e=leBGZm)               |    [![lia-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/lia.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/lia.gif)             |
-|                         | 19        | DaGAN         |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EUxxlMvrS4tMjfRDLxGfhUABzhrQ4BgRoQOK30VuR6T49w?e=fnFeXl)               |    [![dagan-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/dagan.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/dagan.gif)             |
-|                         | 20        | SadTalker     |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EabgEcMgF8pJkCfxUAamBikB-hbguKrTuuBmBRfA859tHA?e=GnSTyg)               |    [![sadtalker-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/sadtalker.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/sadtalker.gif)             |
-|                         | 21        | MCNet         |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/ER18O8NJwu9Fo0w6r0Xz48sBrrBLFt6bIVR_iJyc4T4QHg?e=rg0r0h)               |    [![mcnet-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mcnet.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mcnet.gif)             |
-|                         | 22        | HyperReenact  |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EcbYB4rIAb5Hs9_HtdSITW0B4SRONFu2wjIT4yvWn2JgUA?e=wIKFVz)               |     [![hyperreenact-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/hyperreenact.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/hyperreenact.gif)            |
-|                         | 23        | HeyGen        |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EfUFQs-MZRZOq3fpfbPgmasBXsKQAwwMGxjP8E50OdwqCQ?e=0URXYd)               |     [![heygen-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/heygen.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/heygen.gif)            |
-| Entire Face Synthesis (EFS) | 24    | VQGAN         |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EaX03B4zRzBFqtKXaQDAR3gBh18HYKv5q6k0SQvTMYz5OQ?e=H4OqG3)               |     [![vqgan-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/vqgan.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/vqgan.png)            |
-|                         | 25        | StyleGAN2     |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EfcmYbPWeC1FkMs2mnpSpkQBCMtODYwuyLMoauHo5KvNSQ?e=UZsjPC)               |     [![stylegan2-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/stylegan2.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/stylegan2.png)            |
-|                         | 26        | StyleGAN3     |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/ERvrO00gex5Eu-ZW_D_hyKEBjhhXa76aqkTTDN8Q34Izpw?e=R5XZ9N)               |     [![stylegan3-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/stylegan3.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/stylegan3.png)            |
-|                         | 27        | StyleGAN-XL   |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/ESM4dEPKYspLjMxzWWlO6owBSGwpNWo4XYUuaCzAdbWPPQ?e=g4T7PS)               |     [![styleganxl-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/styleganxl.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/styleganxl.png)            |
-|                         | 28        | SD-2.1        |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/ESY6AbSIx_hHj-2aLduJrdwBxQwe3U5ANeG0sGFk0PnuOQ?e=Vjwm0n)               |      [![sd2.1-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/sd2.1.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/sd2.1.png)           |
-|                         | 29        | DDPM          |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EVfM0nmd0-tGgEZXoxM_TVEB-fGjJ1X8VeI_FqfDZGdzDA?e=u9R4nG)               |      [![ddpm-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/ddim.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/ddim.png)           |
-|                         | 30        | RDDM          |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EQLtPwX7-IZKhY20J4h1S4sBc0bpyRn0MdYBcbBTHiupWg?e=cCbfCR)               |      [![rddm-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/rddm.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/rddm.png)           |
-|                         | 31        | PixArt-$\alpha$ |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/ERnzCPmKchdEqlwnyK5zvxQB4sVFQo6wE_h2zwXLVgSb5A?e=mARXUu)             |        [![pixart-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/pixart.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/pixart.png)         |
-|                         | 32        | DiT-XL/2      |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/Eb6NICxFafhFq54pRNlM74sB32e9Tq48hvUF53A5tu1I5Q?e=Nefcld)               |       [![dit-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/dit.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/dit.png)           |
-|                         | 33        | SiT-XL/2      |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EW-3ZFwOh9tPtTvBmpJoHJoBZnLoHv4QS6Bq8CYZPZ5P0w?e=aRBzlv)               |       [![sit-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/sit.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/sit.png)          |
-|                         | 34        | MidJounery6   |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/Ea7gykdNkYxIjdihRkOX-OkB-wfrXRvcyHrL8xO_FrT1Iw?e=kXyI3J)               |      [![mj-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mj.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mj.png)           |
-|                         | 35        | WhichisReal   |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EfE0VjMMmhVGhaB3NOKkIewBFelxCqJZjbKWEcSGmbYVEg?e=k6cCAZ)               |      [![vqgan-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/whichisreal.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/whichisreal.png)           |
-| Face Edit (FE)          | 36        | CollabDiff    |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EXYtnmeNlDlHgiMrLoesrZMBfQaDmX-HaN2-o-DVnZBe7Q?e=y5KC3p)               |       [![collabdiff-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/collabdiff.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/collabdiff.png)          |
-|                         | 37        | e4e           |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EerqA8zZXfpCiuZINnh3PksB8KvKdhuNINJ5mDGraYrkTw?e=wZRPnV)               |       [![e4e-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/e4e.jpg)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/e4e.jpg)          |
-|                         | 38        | StarGAN       |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/Ea6LPDfiPvROm2QrD9yDvUUBHUVQLOlZW1UjufLblzBUBw?e=eAzmJ8)               |       [![stargan-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/stargan.jpg)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/stargan.jpg)          |
-|                         | 39        | StarGANv2     |               |                 |
-|                         | 40        | StyleCLIP     |[One-Drive](https://cuhko365-my.sharepoint.com/:u:/g/personal/222041040_link_cuhk_edu_cn/EbKlB_5yBthCrngJl74LSG4BiX6Jwf9ciElzJlD-H-_Vzw?e=eEPuuN)               |       [![styleclip-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/styleclip.jpg)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/styleclip.jpg)          |
+| Face-swapping (FS)      | 1         | FSGAN         |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |  [![fsgan-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/fsgan.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/fsgan.gif)               |
+|  Face-swapping (FS)                        | 2         | FaceSwap      |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |  [![faceswap-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/faceswap.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/faceswap.gif)               |
+|   Face-swapping (FS)                       | 3         | SimSwap       |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |  [![simswap-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/simswap.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/simswap.gif)               |
+|    Face-swapping (FS)                      | 4         | InSwapper     |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)              |  [![inswap-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/inswap.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/inswap.gif)               |
+|    Face-swapping (FS)                      | 5         | BlendFace     |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |   [![blendface-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/blendface.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/blendface.gif)              |
+|   Face-swapping (FS)                       | 6         | UniFace       |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |   [![uniface-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/uniface.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/uniface.gif)              |
+|    Face-swapping (FS)                      | 7         | MobileSwap    |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |   [![mobileswap-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mobileswap.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mobileswap.gif)              |
+|    Face-swapping (FS)                      | 8         | e4s           |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |   [![e4s-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/e4s.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/e4s.gif)              |
+|   Face-swapping (FS)                       | 9         | FaceDancer    |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |    [![facedancer-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/facedancer.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/facedancer.gif)             |
+|   Face-swapping (FS)                       | 10        | DeepFaceLab   |[UADFV](https://docs.google.com/forms/d/e/1FAIpQLScKPoOv15TIZ9Mn0nGScIVgKRM9tFWOmjh9eHKx57Yp-XcnxA/viewform?usp=send_form)               |    [![deepfacelab-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/deepfacelab.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/deepfacelab.gif)            |
+| Face-reenactment (FR)   | 11        | FOMM          |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |    [![fomm-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/fomm.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/fomm.gif)             |
+|  Face-reenactment (FR)                       | 12        | FS_vid2vid    |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |    [![face_vid2vid-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/face_vid2vid.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/face_vid2vid.gif)             |
+|   Face-reenactment (FR)                      | 13        | Wav2Lip       |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |    [![wav2lip-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/wav2lip.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/wav2lip.gif)             |
+|   Face-reenactment (FR)                      | 14        | MRAA          |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |    [![mraa-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mraa.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mraa.gif)             |
+|   Face-reenactment (FR)                      | 15        | OneShot       |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |    [![oneshot-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/oneshot.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/oneshot.gif)             |
+|   Face-reenactment (FR)                      | 16        | PIRender      |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |    [![pirender-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/pirender.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/pirender.gif)             |
+|   Face-reenactment (FR)                      | 17        | TPSM         |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |    [![tpsm-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/tpsm.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/tpsm.gif)             |
+|   Face-reenactment (FR)                      | 18        | LIA           |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |    [![lia-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/lia.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/lia.gif)             |
+|   Face-reenactment (FR)                      | 19        | DaGAN         |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |    [![dagan-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/dagan.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/dagan.gif)             |
+|   Face-reenactment (FR)                      | 20        | SadTalker     |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |    [![sadtalker-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/sadtalker.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/sadtalker.gif)             |
+|   Face-reenactment (FR)                      | 21        | MCNet         |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |    [![mcnet-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mcnet.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mcnet.gif)             |
+|   Face-reenactment (FR)                      | 22        | HyperReenact  |[FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |     [![hyperreenact-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/hyperreenact.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/hyperreenact.gif)            |
+|    Face-reenactment (FR)                     | 23        | HeyGen        |[FVHQ](https://liangbinxie.github.io/projects/vfhq/)               |     [![heygen-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/heygen.gif)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/heygen.gif)            |
+| Entire Face Synthesis (EFS) | 24    | VQGAN         |Finetuning on [FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |     [![vqgan-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/vqgan.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/vqgan.png)            |
+| Entire Face Synthesis (EFS)                        | 25        | StyleGAN2     |Finetuning on [FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |     [![stylegan2-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/stylegan2.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/stylegan2.png)            |
+| Entire Face Synthesis (EFS)                        | 26        | StyleGAN3     |Finetuning on [FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |     [![stylegan3-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/stylegan3.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/stylegan3.png)            |
+|  Entire Face Synthesis (EFS)                       | 27        | StyleGAN-XL   |Finetuning on [FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |     [![styleganxl-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/styleganxl.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/styleganxl.png)            |
+|  Entire Face Synthesis (EFS)                       | 28        | SD-2.1        |Finetuning on [FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |      [![sd2.1-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/sd2.1.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/sd2.1.png)           |
+|  Entire Face Synthesis (EFS)                       | 29        | DDPM          |Finetuning on [FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |      [![ddpm-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/ddim.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/ddim.png)           |
+|  Entire Face Synthesis (EFS)                       | 30        | RDDM          |Finetuning on [FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |      [![rddm-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/rddm.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/rddm.png)           |
+|  Entire Face Synthesis (EFS)                       | 31        | PixArt-$\alpha$ |Finetuning on [FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)             |        [![pixart-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/pixart.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/pixart.png)         |
+|  Entire Face Synthesis (EFS)                       | 32        | DiT-XL/2      |Finetuning on [FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |       [![dit-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/dit.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/dit.png)           |
+|  Entire Face Synthesis (EFS)                       | 33        | SiT-XL/2      |Finetuning on [FF++](https://github.com/ondyari/FaceForensics) and [Celeb-DF](https://github.com/yuezunli/celeb-deepfakeforensics)               |       [![sit-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/sit.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/sit.png)          |
+|  Entire Face Synthesis (EFS)                       | 34        | MidJounery6   |[FFHQ](https://github.com/NVlabs/ffhq-dataset)               |      [![mj-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mj.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/mj.png)           |
+|  Entire Face Synthesis (EFS)                       | 35        | WhichisReal   |[FFHQ](https://github.com/NVlabs/ffhq-dataset)               |      [![vqgan-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/whichisreal.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/whichisreal.png)           |
+| Face Edit (FE)          | 36        | CollabDiff    |[CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)               |       [![collabdiff-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/collabdiff.png)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/collabdiff.png)          |
+| Face Edit (FE)                        | 37        | e4e           |[CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)               |       [![e4e-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/e4e.jpg)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/e4e.jpg)          |
+|  Face Edit (FE)                       | 38        | StarGAN       |[CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)               |       [![stargan-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/stargan.jpg)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/stargan.jpg)          |
+|  Face Edit (FE)                       | 39        | StarGANv2     | [CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)               |       ![starganv2-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/starganv2.jpg)          |
+|  Face Edit (FE)                       | 40        | StyleCLIP     |[CelebA](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)              |       [![styleclip-Example](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/styleclip.jpg)](https://github.com/YZY-stack/temp_40_pangu/releases/download/visual_example/styleclip.jpg)          |
 
 
 
 ## ⏳ Quick Start
+<a href="#top">[Back to top]</a>
+
 
 ### 1. Installation
 Please run the following script to install the required libraries:
@@ -110,17 +116,88 @@ Please run the following script to install the required libraries:
 sh install.sh
 ```
 
-### 2. Preprocessing
+### 2. Download ckpts for inference
+All checkpoints/weights of ten models training on our DF40 are released at [Google Drive](https://drive.google.com/drive/folders/1HDgIOutGw3jsFXwvSQYeDoVPAzgfYbyr?usp=drive_link). 
+
+Note that:
+- If your want to use the CLIP model that is trained on all FS methods of DF40, you can find it at `df40_weights/train_on_fs/clip.pth`. You can use all ckpts under `df40_weights/train_on_xxx_matrix` to reproduce the results of **Protocol-1,2,3** of our paper.
+- Similarly, if you want to use the Xception model that is trained **specifically** on the SimSwap method, you can find it at the folder `df40_weights/train_on_fs_matrix/simswap_ff.pth`. You can use all ckpts under `df40_weights/train_on_xxx_matrix` to reproduce the results of **Protocol-4** of our paper.
+
+
+
+### 3. Download DF40 data (after pre-processing)
+For a quick use and convenience, we provide all DF40 data after pre-processing using in our research. You do **NOT need to do the pre-processing again** but directly use our processed data.
+- DF40 (testing data):.
+  - Description: We provide the [Google Drive Link](https://drive.google.com/drive/folders/1U8meBbqVvmUkc5GD0jxct6xe6Gwk9wKD?usp=drive_link) of the whole DF40 testing data (40 methods) after preprocessing (frame extraction and face cropping), including **fake images only.**
+  - Size: The whole size is **~93G**, including all testing fake data of DF40.
+- DF40 (training data):
+  - Description: We provide the [Google Drive Link](https://drive.google.com/drive/folders/1980LCMAutfWvV6zvdxhoeIa67TmzKLQ_?usp=drive_link) of the whole DF40 training data after preprocessing (frame extraction and face cropping), including **fake images only.**
+  - Size: The whole size is **~93G**, including all testing fake data of DF40.
+- Original Real Data (FF++ and Celeb-DF):
+  - **For "known" 31 methods:** To obtain the **real data** for both training and testing purposes, please use the following links: FaceForensics++ real data ([Google Drive Link](https://drive.google.com/file/d/1dHJdS0NZ6wpewbGA5B0PdIBS9gz28pdb/view?usp=drive_link)) and Celeb-DF real data ([Google Drive Link](https://drive.google.com/file/d/1P9Ep4-nxGpBX8LZGq2UyxqoCL6sBDN8Z/view?usp=drive_link)).
+  - **For "unknown" 9 methods:** The real data is **already included within the folder**, so there is **NO** additional download link required for the real data of the unknown methods.
+- JSON files for recording image paths:
+  - Description: we create a JSON file to load all frame paths for each method in a unified way.
+  - All JSON files used in our research can be download here ([Google Drive](https://drive.google.com/drive/folders/19VhAL4aDJOKvhl9stEq_ymFeHiXo6_j-?usp=drive_link)). 
+  - After downloading, Please put the folder `dataset_json` inside the `./preprocessing/ folder.
+
+
+
+### 3. Run inference
+You can then run inference using the trained weights used in our research. 
+
+> **Example-1:** If you want to use the Xception model trained on SimSwap (FF) and test it on BlendFace (FF), run the following line. 
+
+```
+cd DeepfakeBench_DF40
+
+python training/test.py --detector_path training/config/detector/xception.yaml --weights_path training/df40_weights/train_on_fs_matrix/simswap_ff.pth  --test_dataset blendface_ff
+```
+
+
+> **Example-2:** If you want to use the Xception model trained on SimSwap (FF) and test it on SimSwap (CDF), run the following line. 
+
+```
+cd DeepfakeBench_DF40
+
+python training/test.py --detector_path training/config/detector/xception.yaml --weights_path training/df40_weights/train_on_fs_matrix/simswap_ff.pth  --test_dataset simswap_cdf
+```
+
+
+
+> **Example-3:** If you want to use the CLIP model trained on all methods of FS (FF) and test it on DeepFaceLab, run the following line. 
+
+```
+cd DeepfakeBench_DF40
+
+python training/test.py --detector_path training/config/detector/clip.yaml --weights_path training/df40_weights/train_on_fs/clip.pth  --test_dataset deepfacelab
+```
+
+
+
+
+## 💻 Reproduction and Development
 
 <a href="#top">[Back to top]</a>
 
-To start preprocessing your dataset, please follow these steps:
 
-1. Download the [shape_predictor_81_face_landmarks.dat](https://github.com/SCLBD/DeepfakeBench/releases/download/v1.0.0/shape_predictor_81_face_landmarks.dat) file. Then, copy the downloaded shape_predictor_81_face_landmarks.dat file into the `./preprocessing/dlib_tools folder`. This file is necessary for Dlib's face detection functionality.
+### 1. Download DF40 dataset
 
-2. Open the [`./preprocessing/config.yaml`](./preprocessing/config.yaml) and locate the line `default: DATASET_YOU_SPECIFY`. Replace `DATASET_YOU_SPECIFY` with the name of the dataset you want to preprocess, such as `FaceForensics++`.
+We provide two ways for downloading our dataset:
+- **Option-1**: Using the processed data after preprocessing that used also in our research. Please see `Quick Start` part;
+- **Option-2**: If you also want to download the original fake videos of all FS and FR methods, please download them at the link ([Google Drive](https://drive.google.com/drive/folders/1GB3FN4pjf9Q5hhhcBmBTdMmEmtrDe9zZ?usp=drive_link)). For EFS and FE methods, the original data is the processed data, they are the same since they do not need to perform preprocessing (e.g., frame extraction and face crop).
 
-7. Specify the `dataset_root_path` in the config.yaml file. Search for the line that mentions dataset_root_path. By default, it looks like this: ``dataset_root_path: ./datasets``.
+
+
+### 2. Preprocessing (**optional**)
+
+**If you only want to use the processed data we provided, you can skip this step. Otherwise, you need to use the following codes for doing data preprocessing.**
+
+To start preprocessing DF40 dataset, please follow these steps:
+
+1. Open the `./preprocessing/config.yaml` and locate the line `default: DATASET_YOU_SPECIFY`. Replace `DATASET_YOU_SPECIFY` with the name of the dataset you want to preprocess, such as `FaceForensics++`.
+
+2. Specify the `dataset_root_path` in the config.yaml file. Search for the line that mentions dataset_root_path. By default, it looks like this: ``dataset_root_path: ./datasets``.
 Replace `./datasets` with the actual path to the folder where your dataset is arranged. 
 
 Once you have completed these steps, you can proceed with running the following line to do the preprocessing:
@@ -132,10 +209,13 @@ python preprocess.py
 ```
 
 
-### 3. Rearrangement
-To simplify the handling of different datasets, we propose a unified and convenient way to load them. The function eliminates the need to write separate input/output (I/O) code for each dataset, reducing duplication of effort and easing data management.
+### 3. Rearrangement (**optional**)
 
-After the preprocessing above, you will obtain the processed data (*i.e., frames, landmarks, and masks*) for each dataset you specify. Similarly, you need to set the parameters in `./preprocessing/config.yaml` for each dataset. After that, run the following line:
+> "Rearrangment" here means that we need to create a JSON file for each dataset for collecting all frames within different folders.
+
+**If you only want to use the processed data we provided, you can skip this step and use the JSON files we used in our research ([Google Drive](https://drive.google.com/drive/folders/19VhAL4aDJOKvhl9stEq_ymFeHiXo6_j-?usp=drive_link)). Otherwise, you need to use the following codes for doing data rearrangement.**
+
+After the preprocessing above, you will obtain the processed data (*e.g., frames, landmarks, and masks*) for each dataset you specify. Similarly, you need to set the parameters in `./preprocessing/config.yaml` for each dataset. After that, run the following line:
 ```
 cd preprocessing
 
@@ -144,30 +224,38 @@ python rearrange.py
 After running the above line, you will obtain the JSON files for each dataset in the `./preprocessing/dataset_json` folder. The rearranged structure organizes the data in a hierarchical manner, grouping videos based on their labels and data splits (*i.e.,* train, test, validation). Each video is represented as a dictionary entry containing relevant metadata, including file paths, labels, compression levels (if applicable), *etc*. 
 
 
-### 4. Training and Evaluation
 
-<a href="#top">[Back to top]</a>
+### 4. Training
+Our benchmark includes four standarad protocols. You can use the following examples of each protocol to train the models:
 
 **(a). Protocol-1: Same Data Domain, Differenet Forgery Types**
 
-First, you can run the following lines to train a model (*e.g.,* I3D model):
+First, you can run the following lines to train a model (*e.g.,* if you want to train the Xception model on all FS methods):
+- For multiple GPUs:
 ```
 python3 -m torch.distributed.launch --nproc_per_node=8 training/train.py \
---detector_path ./training/config/detector/i3d.yaml \
+--detector_path ./training/config/detector/xception.yaml \
 --train_dataset FSAll_ff \
 --test_dataset FSAll_ff \
 --ddp
 ```
+- For a single GPU:
+```
+python3 training/train.py \
+--detector_path ./training/config/detector/xception.yaml \
+--train_dataset FSAll_ff \
+--test_dataset FSAll_ff \
+```
 
-Note, we here perform both training and testing on FSAll_ff (using all FS data of FF domain as the *evaluation set*) to select the best checkpoint. Once finished training, you can use the best checkpoint to evaluate other testing datasets.
+Note, we here perform both training and evaluating on FSAll_ff (using all *testing* FS methods of *FF domain* as the evaluation set) to select the best checkpoint. Once finished training, you can use the best checkpoint to evaluate other testing datasets (e.g., all testing EFS and FR methods of the FF domain). Specifically:
 
 ```
 python3 training/test.py \
---detector_path ./training/config/detector/i3d.yaml \
+--detector_path ./training/config/detector/xception.yaml \
 --test_dataset "FSAll_ff" "FRAll_ff" "EFSAll_ff" \
---weights_path ./training/weights/i3d.pth
+--weights_path ./training/df40_weights/train_on_fs/xception.pth
 ```
-Then, you can obtain all evaluation results reported in Tab. 3 of the manuscript.
+Then, you can obtain similar evaluation results reported in **Tab. 3** of the manuscript.
 
 
 
@@ -176,12 +264,48 @@ Similarly, you can run the following lines for Protocol-2.
 
 ```
 python3 training/test.py \
---detector_path ./training/config/detector/i3d.yaml \
+--detector_path ./training/config/detector/xception.yaml \
 --test_dataset "FSAll_cdf" "FRAll_cdf" "EFSAll_cdf" \
---weights_path ./training/weights/i3d.pth
+--weights_path ./training/df40_weights/train_on_fs/xception.pth
 ```
-Then, you can obtain all evaluation results reported in Tab. 4 of the manuscript.
+Then, you can obtain similar evaluation results reported in **Tab. 4** of the manuscript.
 
+
+
+**(c). Protocol-3: Differenet Forgery Types, Differenet Data Domain**
+Similarly, you can run the following lines for Protocol-3.
+
+```
+python3 training/test.py \
+--detector_path ./training/config/detector/xception.yaml \
+--test_dataset "deepfacelab" "heygen" "whichisreal" "MidJourney" "stargan" "starganv2" "styleclip" "e4e" "CollabDiff" \
+--weights_path ./training/df40_weights/train_on_fs/xception.pth
+```
+Then, you can obtain all evaluation results reported in **Tab. 5** of the manuscript.
+
+
+
+
+**(c). Protocol-4: Train on one fake method and testing on all other methods (One-vs-All)**
+Similarly, you should first train one model (e.g., Xception) on one specific fake method (e.g., SimSwap):
+
+```
+python3 training/train.py \
+--detector_path ./training/config/detector/xception.yaml \
+--train_dataset simswap_ff \
+--test_dataset simswap_ff \
+```
+
+Then runing the following lines for evaluation:
+```
+python3 training/test.py \
+--detector_path ./training/config/detector/xception.yaml \
+--test_dataset ... (type them one-by-one) \
+--weights_path ./training/df40_weights/train_on_fs_matrix/simswap_ff.pth
+```
+You can also directly use the **bash file** (`./training/test_df40.sh`) for convenience and then you do not need to type all fake methods one-by-one at the terminal.
+
+Then, you can obtain all evaluation results reported in **Fig. 4** of the manuscript.
 
 
 

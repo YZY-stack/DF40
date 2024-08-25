@@ -1,0 +1,9 @@
+# python3 -m torch.distributed.launch --nproc_per_node=8 training/train.py --detector_path ./training/config/detector/i3d.yaml --train_dataset FRAll_ff --test_dataset FRAll_ff --ddp
+# python3 -m torch.distributed.launch --nproc_per_node=8 training/train.py --detector_path ./training/config/detector/stil.yaml --train_dataset FRAll_ff --test_dataset FRAll_ff --ddp
+# python3 -m torch.distributed.launch --nproc_per_node=8 training/train.py --detector_path ./training/config/detector/stil.yaml --train_dataset FSAll_ff --test_dataset FSAll_ff --ddp
+# python3 -m torch.distributed.launch --nproc_per_node=8 training/train.py --detector_path ./training/config/detector/stil.yaml --train_dataset FSAll_ff,FRAll_ff --test_dataset  FSAll_ff,FRAll_ff --ddp
+# python3 -m torch.distributed.launch --nproc_per_node=8 training/train.py --detector_path ./training/config/detector/clip.yaml --train_dataset FaceShifter --test_dataset FaceShifter --ddp
+# python3 -m torch.distributed.launch --nproc_per_node=8 training/train.py --detector_path ./training/config/detector/clip.yaml --train_dataset DeeperForensics-1.0 --test_dataset DeeperForensics-1.0 --ddp
+python3 -m torch.distributed.launch --nproc_per_node=8 training/train.py --detector_path ./training/config/detector/clip.yaml --train_dataset FSAll_ff --ddp
+python3 -m torch.distributed.launch --nproc_per_node=8 training/train.py --detector_path ./training/config/detector/clip.yaml --train_dataset FRAll_ff --ddp
+python3 -m torch.distributed.launch --nproc_per_node=8 training/train.py --detector_path ./training/config/detector/clip.yaml --train_dataset EFSAll_ff --ddp

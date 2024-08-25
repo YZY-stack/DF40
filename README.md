@@ -1,4 +1,4 @@
-# DF40: Toward Next-Generation Deepfake Detection ([Project Page](https://yzy-stack.github.io/homepage_for_df40/))
+# DF40: Toward Next-Generation Deepfake Detection ([Project Page](https://yzy-stack.github.io/homepage_for_df40/), [Paper](https://arxiv.org/abs/2406.134950))
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-brightgreen.svg)](https://creativecommons.org/licenses/by-nc/4.0/) ![Release .10](https://img.shields.io/badge/Release-1.0-brightgreen) ![PyTorch](https://img.shields.io/badge/PyTorch-1.11-brightgreen) ![Python](https://img.shields.io/badge/Python-3.7.2-brightgreen)
 
@@ -40,14 +40,6 @@ The following table displays the statistical description and illustrates the det
 
 ---
 
-The figure below shows the pipeline of four generation methods used in our DF40 dataset.
-
-
-<div align="center"> 
-</div>
-<div style="text-align:center;">
-  <img src="df40_figs/df40_pipeline.jpg" style="max-width:60%;">
-</div>
 
 
 

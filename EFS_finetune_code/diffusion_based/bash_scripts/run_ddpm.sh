@@ -13,7 +13,7 @@ accelerate launch --mixed_precision="fp16" train_scripts/train_ddpm.py  \
   --enable_xformers_memory_efficient_attention \
   --validation_prompt="a wxpay human face" \
   --checkpointing_steps=10000 \
-  --image_folder="/apdcephfs_cq10/share_1275017/chengmingxu/Datasets/wxpay/Celeb-DF-v2/all_frames/" \
+  --image_folder="/apdcephfs_cq10/share_1275017/Datasets/Celeb-DF-v2/all_frames/" \
   --validation_epochs=10000
 
 accelerate launch --mixed_precision="fp16" train_scripts/train_ddpm.py  \

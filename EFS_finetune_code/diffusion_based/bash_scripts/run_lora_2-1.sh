@@ -12,7 +12,7 @@ accelerate launch --mixed_precision="fp16" train_scripts/train_sd_lora.py \
   --max_grad_norm=1 \
   --lr_scheduler="constant" --lr_warmup_steps=0 \
   --enable_xformers_memory_efficient_attention \
-  --validation_prompt="a wxpay human face" \
+  --validation_prompt="a human face" \
   --checkpointing_steps=2500 \
   --image_folder="/apdcephfs_cq10/Datasets/Celeb-DF-v2/all_frames/" \
   --validation_epochs=1000000
@@ -30,7 +30,7 @@ accelerate launch --mixed_precision="fp16" train_scripts/train_sd_lora.py \
   --max_grad_norm=1 \
   --lr_scheduler="constant" --lr_warmup_steps=0 \
   --enable_xformers_memory_efficient_attention \
-  --validation_prompt="a wxpay human face" \
+  --validation_prompt="a human face" \
   --checkpointing_steps=2500 \
   --image_folder="/apdcephfs_cq10/Datasets/FaceForensics++/all_frames/" \
   --validation_epochs=1000000

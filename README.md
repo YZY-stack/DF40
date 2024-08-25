@@ -136,7 +136,10 @@ You can then run inference using the trained weights used in our research.
 ```
 cd DeepfakeBench_DF40
 
-python training/test.py --detector_path training/config/detector/xception.yaml --weights_path training/df40_weights/train_on_fs_matrix/simswap_ff.pth  --test_dataset blendface_ff
+python training/test.py \
+--detector_path training/config/detector/xception.yaml \
+--weights_path training/df40_weights/train_on_fs_matrix/simswap_ff.pth  \
+--test_dataset blendface_ff
 ```
 
 
@@ -145,7 +148,10 @@ python training/test.py --detector_path training/config/detector/xception.yaml -
 ```
 cd DeepfakeBench_DF40
 
-python training/test.py --detector_path training/config/detector/xception.yaml --weights_path training/df40_weights/train_on_fs_matrix/simswap_ff.pth  --test_dataset simswap_cdf
+python training/test.py \
+--detector_path training/config/detector/xception.yaml \
+--weights_path training/df40_weights/train_on_fs_matrix/simswap_ff.pth  \
+--test_dataset simswap_cdf
 ```
 
 
@@ -155,7 +161,10 @@ python training/test.py --detector_path training/config/detector/xception.yaml -
 ```
 cd DeepfakeBench_DF40
 
-python training/test.py --detector_path training/config/detector/clip.yaml --weights_path training/df40_weights/train_on_fs/clip.pth  --test_dataset deepfacelab
+python training/test.py \
+--detector_path training/config/detector/clip.yaml \
+--weights_path training/df40_weights/train_on_fs/clip.pth  \
+--test_dataset deepfacelab
 ```
 
 
@@ -302,7 +311,7 @@ Then, you can obtain all evaluation results reported in **Fig. 4** of the manusc
 <div align="center"> 
 </div>
 <div style="text-align:center;">
-  <img src="./df40_figs/fs_visual.png" style="max-width:60%;">
+  <img src="./df40_figs/df40_figs/fs_visual.png" style="max-width:60%;">
 </div>
 
 
@@ -311,7 +320,7 @@ Then, you can obtain all evaluation results reported in **Fig. 4** of the manusc
 <div align="center"> 
 </div>
 <div style="text-align:center;">
-  <img src="./df40_figs/fr_visual.png" style="max-width:60%;">
+  <img src="./df40_figs/df40_figs/fr_visual.png" style="max-width:60%;">
 </div>
 
 3. Example samples created by **EFS (entire face synthesis)** methods:
@@ -319,7 +328,7 @@ Then, you can obtain all evaluation results reported in **Fig. 4** of the manusc
 <div align="center"> 
 </div>
 <div style="text-align:center;">
-  <img src="./df40_figs/efs_visual.png" style="max-width:60%;">
+  <img src="./df40_figs/df40_figs/efs_visual.png" style="max-width:60%;">
 </div>
 
 4. Example samples created by **FE (face editing)** methods:
@@ -327,6 +336,6 @@ Then, you can obtain all evaluation results reported in **Fig. 4** of the manusc
 <div align="center"> 
 </div>
 <div style="text-align:center;">
-  <img src="./df40_figs/unknown_visual.png" style="max-width:60%;">
+  <img src="./df40_figs/df40_figs/unknown_visual.png" style="max-width:60%;">
 </div>
 

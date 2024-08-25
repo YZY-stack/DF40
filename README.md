@@ -29,7 +29,7 @@ The figure below provides a brief introduction to our DF40 dataset.
 ---
 
 
-The following two figures display the statistical description and illustrate the details of our DF40 dataset. **Please check our paper for details.**
+The following table displays the statistical description and illustrates the details of our DF40 dataset. **Please check our paper for details.**
 
 <div align="center"> 
 </div>

@@ -1,4 +1,4 @@
-# DF40: Toward Next-Generation Deepfake Detection ([Project Page](https://yzy-stack.github.io/homepage_for_df40/); [Paper Link](https://arxiv.org/abs/2406.134950))
+# DF40: Toward Next-Generation Deepfake Detection ([Project Page](https://yzy-stack.github.io/homepage_for_df40/); [Paper Link](https://arxiv.org/abs/2406.134950); [Download DF40](https://docs.google.com/forms/d/1ESAWoWusOEGEEVnXCH_emv-wJqCYMhCbD6-85RMIoDk/edit))
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-brightgreen.svg)](https://creativecommons.org/licenses/by-nc/4.0/) ![Release .10](https://img.shields.io/badge/Release-1.0-brightgreen) ![PyTorch](https://img.shields.io/badge/PyTorch-1.11-brightgreen) ![Python](https://img.shields.io/badge/Python-3.7.2-brightgreen)
 
@@ -306,36 +306,10 @@ Then, you can obtain all evaluation results reported in **Fig. 4** of the manusc
 ## 👀 More visual examples
 <a href="#top">[Back to top]</a>
 
-1. Example samples created by **FS (face-swapping)** methods:
+1. Example samples created by **FS (face-swapping)** methods: Please check [here](./df40_figs/df40_figs/fs_visual.png).
 
-<div align="center"> 
-</div>
-<div style="text-align:center;">
-  <img src="./df40_figs/df40_figs/fs_visual.png" style="max-width:60%;">
-</div>
+2. Example samples created by **FR (face-reenactment)** methods: Please check [here](./df40_figs/df40_figs/fr_visual.png).
 
+3. Example samples created by **EFS (entire face synthesis)** methods: Please check [here](./df40_figs/df40_figs/efs_visual.png).
 
-2. Example samples created by **FR (face-reenactment)** methods:
-
-<div align="center"> 
-</div>
-<div style="text-align:center;">
-  <img src="./df40_figs/df40_figs/fr_visual.png" style="max-width:60%;">
-</div>
-
-3. Example samples created by **EFS (entire face synthesis)** methods:
-
-<div align="center"> 
-</div>
-<div style="text-align:center;">
-  <img src="./df40_figs/df40_figs/efs_visual.png" style="max-width:60%;">
-</div>
-
-4. Example samples created by **FE (face editing)** methods:
-
-<div align="center"> 
-</div>
-<div style="text-align:center;">
-  <img src="./df40_figs/df40_figs/unknown_visual.png" style="max-width:60%;">
-</div>
-
+4. Example samples created by **FE (face editing)** methods: Please check [here](./df40_figs/df40_figs/unknown_visual.png).

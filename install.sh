@@ -23,7 +23,6 @@ pip install torchtoolbox==0.1.8.2
 pip install tensorboard==2.10.1
 pip install setuptools==59.5.0
 pip install loralib
-pip install pytorchvideo
 pip install einops
 pip install transformers
 pip install filterpy

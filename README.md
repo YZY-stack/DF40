@@ -17,6 +17,8 @@ Welcome to our work **DF40**, for next-generation deepfake detection.
 > ✅ **Forgery Realism**: *DF40* includes realistic deepfake data created by highly popular generation software and methods, *e.g.,* HeyGen, MidJourney, DeepFaceLab, to simulate real-world deepfakes. We even include the just-released DiT, SiT, PixArt-$\alpha$, etc.
 > 
 > ✅ **Forgery Scale**: *DF40* offers **million-level** deepfake data scale for both images and videos.
+> > 
+> ✅ **Data Alignment**: *DF40* provides alignment between fake methods and data domains. Most methods (31) are generated under the FF++ and CDF domains. Using our fake data, you can further expand your evaluation (training on FF++ and testing on CDF).
 
 The figure below provides a brief introduction to our DF40 dataset.
 

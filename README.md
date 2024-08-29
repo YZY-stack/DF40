@@ -3,11 +3,12 @@
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-brightgreen.svg)](https://creativecommons.org/licenses/by-nc/4.0/) ![Release .10](https://img.shields.io/badge/Release-1.0-brightgreen) ![PyTorch](https://img.shields.io/badge/PyTorch-1.11-brightgreen) ![Python](https://img.shields.io/badge/Python-3.7.2-brightgreen)
 
 
-Welcome to our work **DF40**, for next-generation deepfake detection.
+Welcome to our work **DF40**, for next-generation deepfake detection. 
 
 **In this work, we propose: (1) a **diverse deepfake dataset** with 40 distinct generations methods; (2) a **comprehensive benchmark** for training, evaluation, and analysis.**
 
 
+***"Expanding Your Evaluation with 40 distinct High-Quality Fake Data from the FF++ and CDF domains!!"***
 
 **DF40 Dataset Highlight:** The key features of our proposed **DF40 dataset** are as follows
 

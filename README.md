@@ -119,8 +119,8 @@ For a quick use and convenience, we provide all DF40 data after pre-processing u
   - Description: We provide the [Google Drive Link](https://drive.google.com/drive/folders/1U8meBbqVvmUkc5GD0jxct6xe6Gwk9wKD?usp=drive_link) of the whole DF40 testing data (40 methods) after preprocessing (frame extraction and face cropping), including **fake images only.**
   - Size: The whole size is **~93G**, including all testing fake data of DF40.
 - DF40 (training data):
-  - Description: We provide the [Google Drive Link](https://drive.google.com/drive/folders/1980LCMAutfWvV6zvdxhoeIa67TmzKLQ_?usp=drive_link) of the whole DF40 training data after preprocessing (frame extraction and face cropping), including **fake images only.**
-  - Size: The whole size is **~93G**, including all testing fake data of DF40.
+  - Description: Similar to the DF40-test, we provide the processed fake images for training in [Google Drive Link](https://drive.google.com/drive/folders/1980LCMAutfWvV6zvdxhoeIa67TmzKLQ_?usp=drive_link). Please note that the training set ONLY includes the "known" methods and utilizes the FaceForensics++ (ff) domain for training. The Celeb-DF (cdf) domain is not used for training purposes but for testing only.
+  - Size: The whole size is **~50G**, including all training fake data of DF40 (only the FF++ domain).
 - Original Real Data (FF++ and Celeb-DF):
   - **For "known" 31 methods:** To obtain the **real data** for both training and testing purposes, please use the following links: FaceForensics++ real data ([Google Drive Link](https://drive.google.com/file/d/1dHJdS0NZ6wpewbGA5B0PdIBS9gz28pdb/view?usp=drive_link)) and Celeb-DF real data ([Google Drive Link](https://drive.google.com/file/d/1FGZ3aYsF-Yru50rPLoT5ef8-2Nkt4uBw/view?usp=sharing)).
   - **For "unknown" 9 methods:** The real data is **already included within the folder**, so there is **NO** additional download link required for the real data of the unknown methods.

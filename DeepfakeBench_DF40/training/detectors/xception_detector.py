@@ -56,9 +56,6 @@ class XceptionDetector(AbstractDetector):
         self.config = config
         self.backbone = self.build_backbone(config)
         self.loss_func = self.build_loss(config)
-        self.prob, self.label = [], []
-        self.video_names = []
-        self.correct, self.total = 0, 0
         
     def build_backbone(self, config):
         # prepare the backbone
@@ -101,8 +98,6 @@ class XceptionDetector(AbstractDetector):
         # compute metrics for batch data
         auc, eer, acc, ap = calculate_metrics_for_train(label.detach(), pred.detach())
         metric_batch_dict = {'acc': acc, 'auc': auc, 'eer': eer, 'ap': ap}
-        # we dont compute the video-level metrics for training
-        self.video_names = []
         return metric_batch_dict
 
     def forward(self, data_dict: dict, inference=False) -> dict:

@@ -58,28 +58,11 @@ class CLIPDetector(AbstractDetector):
         self.backbone = self.build_backbone(config)
         self.head = nn.Linear(1024, 2)
         self.loss_func = self.build_loss(config)
-        self.prob, self.label = [], []
-        self.correct, self.total = 0, 0
         
     def build_backbone(self, config):
         # prepare the backbone
         # _, backbone = get_clip_visual(model_name="../huggingface/hub/models--openai--clip-vit-base-patch16/snapshots/57c216476eefef5ab752ec549e440a49ae4ae5f3/")        
-        _, backbone = get_clip_visual(model_name="../huggingface/hub/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41/")       
-        # # load pre-trained weights
-        # weight_path = '/Youtu_Pangu_Security/public/youtu-pangu-public/zhiyuanyan/logs/df40_exps/pretraining/df40All_wocdf_cliplarge/clip_2024-06-01-00-31-40/test/Celeb-DF-v2/ckpt_best.pth'
-        # if os.path.exists(weight_path):
-        #     logger.info(f'Loading pre-trained weights from {weight_path}')
-        #     checkpoint = torch.load(weight_path)
-        #     new_weights = {}
-        #     for key, value in checkpoint.items():
-        #         new_key = key.replace('module.', '')  # 删除module前缀
-        #         new_key = new_key.replace('backbone.', '')  # 删除backbone前缀
-        #         if new_key.startswith('head'):
-        #             continue
-        #         new_weights[new_key] = value
-        #     backbone.load_state_dict(new_weights, strict=True)
-        # else:
-        #     raise ValueError(f'No pre-trained weights found at {weight_path}') 
+        _, backbone = get_clip_visual(model_name="../huggingface/hub/models--openai--clip-vit-large-patch14/snapshots/32bd64288804d66eefd0ccbe215aa642df71cc41/")      
         return backbone
     
     def build_loss(self, config):
@@ -119,26 +102,6 @@ class CLIPDetector(AbstractDetector):
         prob = torch.softmax(pred, dim=1)[:, 1]
         # build the prediction dict for each output
         pred_dict = {'cls': pred, 'prob': prob, 'feat': features}
-        if inference:
-            self.prob.append(
-                pred_dict['prob']
-                .detach()
-                .squeeze()
-                .cpu()
-                .numpy()
-            )
-            self.label.append(
-                data_dict['label']
-                .detach()
-                .squeeze()
-                .cpu()
-                .numpy()
-            )
-            # deal with acc
-            _, prediction_class = torch.max(pred, 1)
-            correct = (prediction_class == data_dict['label']).sum().item()
-            self.correct += correct
-            self.total += data_dict['label'].size(0)
 
         return pred_dict
 

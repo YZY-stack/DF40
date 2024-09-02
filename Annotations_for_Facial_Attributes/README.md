@@ -1,0 +1,3 @@
+We have added the annotations for the facial attributes of each video in our dataset. Since we mainly use FF++ and Celeb-DF for creating fake videos and images, we use the tools proposed in [link](https://github.com/pterhoer/DeepFakeAnnotations) for annotations. Here, we have provided the annotations of FF++ and Celeb-DF with zip files. You can also access annotations of other datasets from the above link.
+
+You can use the provided annotations for developing unbiased models and dealing with the fairness problem. Also, since most previous works also use FF++ and Celeb-DF for fairness research, these methods can still be applied in our dataset for further analysis.

@@ -316,3 +316,37 @@ Then, you can obtain all evaluation results reported in **Fig. 4** of the manusc
 3. Example samples created by **EFS (entire face synthesis)** methods: Please check [here](./df40_figs/df40_figs/efs_visual.png).
 
 4. Example samples created by **FE (face editing)** methods: Please check [here](./df40_figs/df40_figs/unknown_visual.png).
+
+
+
+## Citations
+If you use our DF40 dataset, checkpoints/weights, and codes in your research, you must cite DF40 as follows:
+
+```
+@article{yan2024df40,
+  title={DF40: Toward Next-Generation Deepfake Detection},
+  author={Yan, Zhiyuan and Yao, Taiping and Chen, Shen and Zhao, Yandan and Fu, Xinghe and Zhu, Junwei and Luo, Donghao and Yuan, Li and Wang, Chengjie and Ding, Shouhong and others},
+  journal={arXiv preprint arXiv:2406.13495},
+  year={2024}
+}
+```
+
+Since our codebase is mainly based on [DeepfakeBench](https://github.com/SCLBD/DeepfakeBench), you should also cite it as follows:
+
+```
+@inproceedings{DeepfakeBench_YAN_NEURIPS2023,
+ author = {Yan, Zhiyuan and Zhang, Yong and Yuan, Xinhang and Lyu, Siwei and Wu, Baoyuan},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {A. Oh and T. Neumann and A. Globerson and K. Saenko and M. Hardt and S. Levine},
+ pages = {4534--4565},
+ publisher = {Curran Associates, Inc.},
+ title = {DeepfakeBench: A Comprehensive Benchmark of Deepfake Detection},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2023/file/0e735e4b4f07de483cbe250130992726-Paper-Datasets_and_Benchmarks.pdf},
+ volume = {36},
+ year = {2023}
+}
+```
+
+
+## License
+The use of both the dataset and codes is RESTRICTED to Creative Commons Attribution-NonCommercial 4.0 International Public License (CC BY-NC 4.0). See `https://creativecommons.org/licenses/by-nc/4.0/` for details.

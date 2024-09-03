@@ -105,7 +105,7 @@ sh install.sh
 ```
 
 ### 2. Download ckpts for inference
-All checkpoints/weights of ten models training on our DF40 are released at [Google Drive](https://drive.google.com/drive/folders/1HDgIOutGw3jsFXwvSQYeDoVPAzgfYbyr?usp=drive_link). 
+All checkpoints/weights of ten models training on our DF40 are released at [Google Drive](https://drive.google.com/drive/folders/1HDgIOutGw3jsFXwvSQYeDoVPAzgfYbyr?usp=drive_link) and [Baidu Disk](https://pan.baidu.com/s/1X4R32ZgJD8aX0nhnB9G33g?pwd=dqs7). 
 
 Note that:
 - If your want to use the CLIP model that is trained on all FS methods of DF40, you can find it at `df40_weights/train_on_fs/clip.pth`. You can use all ckpts under `df40_weights/train_on_xxx_matrix` to reproduce the results of **Protocol-1,2,3** of our paper.
@@ -122,11 +122,11 @@ For quick use and convenience, we provide all DF40 data after pre-processing usi
   - Description: Similar to the DF40-test, we provide the processed fake images for training in [Google Drive Link](https://drive.google.com/drive/folders/1980LCMAutfWvV6zvdxhoeIa67TmzKLQ_?usp=drive_link) and [Baidu Disk](https://pan.baidu.com/s/1XYGsgBf8lrqiNHfm0enNGQ?pwd=russ). Please note that the training set ONLY includes the "known" methods and utilizes the FaceForensics++ (ff) domain for training. The Celeb-DF (cdf) domain is not used for training purposes but for testing only.
   - Size: The whole size is **~50G**, including all training fake data of DF40 (only the FF++ domain).
 - Original Real Data (FF++ and Celeb-DF):
-  - **For "known" 31 methods:** To obtain the **real data** for both training and testing purposes, please use the following links: FaceForensics++ real data ([Google Drive Link](https://drive.google.com/file/d/1dHJdS0NZ6wpewbGA5B0PdIBS9gz28pdb/view?usp=drive_link)) and Celeb-DF real data ([Google Drive Link](https://drive.google.com/file/d/1FGZ3aYsF-Yru50rPLoT5ef8-2Nkt4uBw/view?usp=sharing)).
+  - **For "known" 31 methods:** To obtain the **real data** for both training and testing purposes, please use the following links: FaceForensics++ real data ([Google Drive Link](https://drive.google.com/file/d/1dHJdS0NZ6wpewbGA5B0PdIBS9gz28pdb/view?usp=drive_link) and [Baidu Disk](https://pan.baidu.com/s/1keh8-LWO05KvR-Nw_fnURQ?pwd=tism)) and Celeb-DF real data ([Google Drive Link](https://drive.google.com/file/d/1FGZ3aYsF-Yru50rPLoT5ef8-2Nkt4uBw/view?usp=sharing) and [Baidu Disk](https://pan.baidu.com/s/1CL3bi7Phi2CvaPXARXvMCA?pwd=8gmu)).
   - **For the "unknown" 9 methods:** The real data is **already included within the folder**, so there is **NO** additional download link required for the real data of the unknown methods.
 - JSON files for recording image paths:
   - Description: we create a JSON file to load all frame paths for each method in a unified way.
-  - All the JSON files used in our research can be downloaded here ([Google Drive](https://drive.google.com/drive/folders/19VhAL4aDJOKvhl9stEq_ymFeHiXo6_j-?usp=drive_link)). 
+  - All the JSON files used in our research can be downloaded here ([Google Drive](https://drive.google.com/drive/folders/19VhAL4aDJOKvhl9stEq_ymFeHiXo6_j-?usp=drive_link) and [Baidu Disk](https://pan.baidu.com/s/1rSfgVL7zguVOK6eZGACHPA?pwd=t4a7)). 
   - After downloading, Please put the folder `dataset_json` inside the `./preprocessing/ folder.
 
 

@@ -1,6 +1,5 @@
 import os
 import logging
-
 import torch.distributed as dist
 
 class RankFilter(logging.Filter):
@@ -11,19 +10,27 @@ class RankFilter(logging.Filter):
     def filter(self, record):
         return dist.get_rank() == self.rank
 
-def create_logger(log_path):
+def create_logger(log_path, rank=0):
     # Create log path
-    if os.path.isdir(os.path.dirname(log_path)):
-        os.makedirs(os.path.dirname(log_path), exist_ok=True)
+    os.makedirs(os.path.dirname(log_path), exist_ok=True)
 
     # Create logger object
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
+
     # Create file handler and set the formatter
-    fh = logging.FileHandler(log_path)
+    try:
+        fh = logging.FileHandler(log_path)
+    except Exception as e:
+        print(f"Error creating log file: {e}")
+        return logger
+
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
     fh.setFormatter(formatter)
-
+    
+    # Apply RankFilter to the file handler
+    fh.addFilter(RankFilter(rank))
+    
     # Add the file handler to the logger
     logger.addHandler(fh)
 

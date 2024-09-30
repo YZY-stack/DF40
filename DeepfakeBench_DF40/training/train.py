@@ -62,49 +62,21 @@ def init_seed(config):
 def prepare_training_data(config):
     # Only use the blending dataset class in training
     if 'dataset_type' in config and config['dataset_type'] == 'blend':
-        if config['model_name'] == 'facexray':
-            train_set = FFBlendDataset(config, mode='train')
-        elif config['model_name'] == 'fwa':
-            train_set = FWABlendDataset(config, mode='train')
-        elif config['model_name'] == 'sbi':
+        if config['model_name'] == 'sbi':
             train_set = SBIDataset(config, mode='train')
-        elif config['model_name'] == 'lsda':
-            train_set = LSDADataset(config, mode='train')
-        elif config['model_name'] == 'yzy':
-            train_set = YZYDataset(config, mode='train')
         else:
             raise NotImplementedError(
-                'Only facexray, fwa, sbi, and lsda are currently supported for blending dataset'
+                'Only sbi is currently supported for blending dataset'
             )
-    elif 'dataset_type' in config and config['dataset_type'] == 'shuffle':
-        train_set = ShuffleDataset(config, mode='train')
     elif 'dataset_type' in config and config['dataset_type'] == 'pair':
         train_set = pairDataset(config, mode='train')  # Only use the pair dataset class in training
-    elif 'dataset_type' in config and config['dataset_type'] == 'iid':
-        train_set = IIDDataset(config, mode='train')
-    elif 'dataset_type' in config and config['dataset_type'] == 'I2G':
-        train_set = I2GDataset(config, mode='train')
-    elif 'dataset_type' in config and config['dataset_type'] == 'lrl':
-        train_set = LRLDataset(config, mode='train')
-    elif 'dataset_type' in config and config['dataset_type'] == 'videoblend':
-        train_set = VBDataset(config, mode='train')
     else:
         train_set = DeepfakeAbstractBaseDataset(
                     config=config,
                     mode='train',
                 )
-    if config['model_name'] == 'lsda':
-        from .dataset.lsda_dataset import CustomSampler
-        custom_sampler = CustomSampler(num_groups=2*360, n_frame_per_vid=config['frame_num']['train'], batch_size=config['train_batchSize'], videos_per_group=5)
-        train_data_loader = \
-            torch.utils.data.DataLoader(
-                dataset=train_set,
-                batch_size=config['train_batchSize'],
-                num_workers=int(config['workers']),
-                sampler=custom_sampler,
-                collate_fn=train_set.collate_fn,
-            )
-    elif config['ddp']:
+
+    if config['ddp']:
         sampler = DistributedSampler(train_set)
         train_data_loader = \
             torch.utils.data.DataLoader(
@@ -131,15 +103,9 @@ def prepare_testing_data(config):
         # update the config dictionary with the specific testing dataset
         config = config.copy()  # create a copy of config to avoid altering the original one
         config['test_dataset'] = test_name  # specify the current test dataset
-        if not config.get('dataset_type', None) == 'lrl':
-            test_set = DeepfakeAbstractBaseDataset(
+        test_set = DeepfakeAbstractBaseDataset(
                     config=config,
                     mode='test',
-            )
-        else:
-            test_set = LRLDataset(
-                config=config,
-                mode='test',
             )
 
         test_data_loader = \

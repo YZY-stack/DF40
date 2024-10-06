@@ -23,8 +23,6 @@ import torch.utils.data
 import torch.optim as optim
 
 from dataset.abstract_dataset import DeepfakeAbstractBaseDataset
-from dataset.ff_blend import FFBlendDataset
-from dataset.fwa_blend import FWABlendDataset
 from dataset.pair_dataset import pairDataset
 
 from trainer.trainer import Trainer
@@ -191,37 +189,6 @@ def main():
         if 'state_dict' in ckpt:
             ckpt = ckpt['state_dict']
 
-        # # 加载模型的状态字典
-        # model_dict = model.state_dict()
-        # new_ckpt={}
-        # for key in ckpt.keys():
-        #     # 替换键
-        #     new_key = key.replace('common_encoder_f','student_encoder')
-        #     # 将旧的值复制到新的键下
-        #     new_ckpt[new_key] = ckpt[key]
-        # # 获取ckpt和model的key集合
-        # ckpt_keys = set(new_ckpt.keys())
-        # model_keys = set(model_dict.keys())
-        #
-        # # 找出共同的key
-        # common_keys = ckpt_keys & model_keys
-        # print("Common keys:")
-        # for key in common_keys:
-        #     print(key)
-        #
-        # # 找出只在ckpt中的key
-        # ckpt_unique_keys = ckpt_keys - model_keys
-        # print("\nKeys only in ckpt:")
-        # for key in ckpt_unique_keys:
-        #     print(key)
-        #
-        # # 找出只在model中的key
-        # model_unique_keys = model_keys - ckpt_keys
-        # print("\nKeys only in model:")
-        # for key in model_unique_keys:
-        #     print(key)
-
-        # 创建一个新的字典，删除module前缀
         new_weights = {}
         for key, value in ckpt.items():
             new_key = key.replace('module.', '')  # 删除module前缀

@@ -20,5 +20,4 @@ from .id_loss import IDLoss
 from .vgg_loss import VGGLoss
 from .js_loss import JS_Loss
 from .patch_consistency_loss import PatchConsistencyLoss
-from .region_independent_loss import RegionIndependentLoss
 from .supercontrast_loss import SupConLoss

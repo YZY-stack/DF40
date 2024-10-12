@@ -181,9 +181,9 @@ python training/test.py \
 
 ### 1. Download DF40 dataset
 
-We provide two ways for downloading our dataset:
-- **Option-1**: Using the processed data after preprocessing that used also in our research. Please see `Quick Start` part;
-- **Option-2**: If you also want to download the original fake videos of all FS and FR methods, please download them at the link ([Google Drive](https://drive.google.com/drive/folders/1GB3FN4pjf9Q5hhhcBmBTdMmEmtrDe9zZ?usp=drive_link)). For EFS and FE methods, the original data is the processed data, they are the same since they do not need to perform preprocessing (e.g., frame extraction and face crop).
+We provide two ways to download our dataset:
+- **Option-1**: Using the processed data after preprocessing that used also in our research. Please see the `Quick Start` part;
+- **Option-2**: If you also want to download the **original fake videos of all FS and FR methods**, please download them at the link ([Google Drive](https://drive.google.com/drive/folders/1GB3FN4pjf9Q5hhhcBmBTdMmEmtrDe9zZ?usp=drive_link)). For EFS and FE methods, the original data is the processed data, they are the same since they do not need to perform preprocessing (e.g., frame extraction and face crop).
 
 
 

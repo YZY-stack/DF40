@@ -211,7 +211,7 @@ python preprocess.py
 
 > "Rearrangment" here means that we need to create a JSON file for each dataset for collecting all frames within different folders.
 
-**If you only want to use the processed data we provided, you can skip this step and use the JSON files we used in our research ([Google Drive](https://drive.google.com/drive/folders/19VhAL4aDJOKvhl9stEq_ymFeHiXo6_j-?usp=drive_link)). Otherwise, you need to use the following codes for doing data rearrangement.**
+**If you only want to use the processed data we provided, you can skip this step and use the JSON files we used in our research ([Google Drive](https://drive.google.com/drive/folders/1rh-82Rn0pqQ7xzLDKBv9gdjy-sbxYC8-?usp=sharing)). Otherwise, you need to use the following codes for doing data rearrangement.**
 
 After the preprocessing above, you will obtain the processed data (*e.g., frames, landmarks, and masks*) for each dataset you specify. Similarly, you need to set the parameters in `./preprocessing/config.yaml` for each dataset. After that, run the following line:
 ```

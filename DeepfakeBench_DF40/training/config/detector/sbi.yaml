@@ -9,7 +9,7 @@ backbone_name: efficientnetb4  # backbone name
 #backbone setting
 backbone_config:
   mode: original
-  num_classes: 4 
+  num_classes: 2 
   inc: 3
   dropout: false
   pretrained: true
@@ -22,7 +22,7 @@ test_dataset: [simswap_cdf, sadtalker_cdf, Celeb-DF-v2, VQGAN_cdf, DiT_cdf, glid
 dataset_type: blend
 
 compression: c23  # compression-level for videos
-train_batchSize: 24   # training batch size
+train_batchSize: 32   # training batch size
 test_batchSize: 32   # test batch size
 workers: 8   # number of data loading workers
 frame_num: {'train': 8, 'test': 8}   # number of frames to use per video in training and testing

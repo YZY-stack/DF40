@@ -117,7 +117,7 @@ Note that:
 ### 3. Download DF40 data (after pre-processing)
 For quick use and convenience, we provide all DF40 data after pre-processing using in our research. You do **NOT need to do the pre-processing again** but directly use our processed data.
 - DF40 (testing data):.
-  - Description: We provide the [Google Drive Link](https://drive.google.com/drive/folders/1980LCMAutfWvV6zvdxhoeIa67TmzKLQ_?usp=drive_link) and [Baidu Disk](https://pan.baidu.com/s/1cSHIggvBz7i2kkhtiNBbgg?pwd=vija) of the whole DF40 testing data (40 methods) after preprocessing (frame extraction and face cropping), including **fake images only.**
+  - Description: We provide the [Google Drive Link](https://drive.google.com/drive/folders/1980LCMAutfWvV6zvdxhoeIa67TmzKLQ_?usp=drive_link) and [Baidu Disk](https://pan.baidu.com/s/15JJCbstvBvdfpb4_WaZ98w?pwd=DF40) (pwd: DF40) of the whole DF40 testing data (40 methods) after preprocessing (frame extraction and face cropping), including **fake images only.**
   - Size: The whole size is **~93G**, including all testing fake data of DF40.
 - DF40 (training data):
   - Description: Similar to the DF40-test, we provide the processed fake images for training in [Google Drive Link](https://drive.google.com/drive/folders/1U8meBbqVvmUkc5GD0jxct6xe6Gwk9wKD?usp=sharing) and [Baidu Disk](https://pan.baidu.com/s/1XYGsgBf8lrqiNHfm0enNGQ?pwd=russ). Please note that the training set ONLY includes the "known" methods and utilizes the FaceForensics++ (ff) domain for training. The Celeb-DF (cdf) domain is not used for training purposes but for testing only.
